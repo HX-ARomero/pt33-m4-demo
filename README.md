@@ -1,0 +1,35 @@
+# Cohorte Part Time 33 - Módulo 4 Especialidad Backend 💾
+
+## Apuntes de Clases
+
+- [Kick-Off](./readmes/00-Kick_Off/00-kick_off.md)
+- [01- Backend Architecture](./readmes/01-Backend_Architecture/01-backend_architecture.md)
+  - [Truty & Falsy](./readmes/01-Backend_Architecture/trythy_&_falsy.md)
+  - [Parámetros & Argumentos](./readmes/01-Backend_Architecture/parametros_&_argumentos.md)
+  - [Parámetros Inteligentes](./readmes/01-Backend_Architecture/parametros_inteligentes.md)
+- [02- NestJS Fundamentals I](./readmes/02-NestJS_I/02-nestjs_fundamentals_I.md)
+  - [Operador de Fusion Nula](./readmes/02-NestJS_I/fusion_nula.md)
+  - [Decoradores](./readmes/02-NestJS_I/decoradores.md)
+- [03- NestJS Fundamentals II](./readmes/03-NestJS_II/03-nestjs_fundamentals_II.md)
+  - [Custom Providers](./readmes/03-NestJS_II/custom_providers.md)
+  - [Guía de Debug en NestJS](./readmes/03-NestJS_II/guia_debug.md)
+- [04- NestJS Routing](./readmes/04-NestJS_Routing/04-nestjs_routing.md)
+  - [Buenas Prácticas](./readmes/04-NestJS_Routing/buenas_practicas.md)
+  - [Principios SOLID con ejemplos](./readmes/04-NestJS_Routing/solid.md)
+- [05- NestJS & TypeORM](./readmes/05-NestJS_TypeORM/NestJS-05.md)
+- [06- NestJS Pipes](./readmes/06-NestJS_Pipes/NestJS-06.md)
+  - [Secuencia de Arranque de NestJS](./readmes/06-NestJS_Pipes/NestJS-06-ArranqueNestJS.md)
+- [07- NestJS File Upload](./readmes/07-NestJS_File_Upload/NestJS-07.md)
+  - [Refactorización de Código](./readmes/07-NestJS_File_Upload/NestJS-07-Refactor.md)
+- [08- Autenticación I](./readmes/08-NestJS_Auth_I/NestJS-08.md)
+- 09- Autenticación II
+  - [Autenticación II - Versión con String](./readmes/09-NestJS_Auth_II/NestJS-09.md)
+  - [Autenticación II - Versión con Array](./readmes/09-NestJS_Auth_II/NestJS-09-array.md)
+- 10- NestJS Testing
+  - [Ciclo de Vida del Software](./readmes/10-NestJS_Testing/NestJS-10-Software.md)
+  - [Testing](./readmes/10-NestJS_Testing/NestJS-10-Testing.md)
+  - [Secuencia de inicio de una aplicación NestJS](./readmes/10-NestJS_Testing/NestJS-10-Arranque.md)
+- [11- Open API / Documentation](./readmes/11-NestJS_OpenAPI_Integration/NestJS-11.md)
+- [12- Docker](./readmes/12-Docker/NestJS-12-Docker.md)
+  - [npkill - Elimninar "node_modules"](./readmes/12-Docker/npkill.md)
+- [Repaso](./readmes/Repaso/Repaso.md)
