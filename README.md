@@ -7,6 +7,7 @@
   - [Truty & Falsy](./readmes/01-Backend_Architecture/trythy_&_falsy.md)
   - [Parámetros & Argumentos](./readmes/01-Backend_Architecture/parametros_&_argumentos.md)
   - [Parámetros Inteligentes](./readmes/01-Backend_Architecture/parametros_inteligentes.md)
+  - [Backend Promting](./readmes/01-Backend_Architecture/backend_promting.md)
 - [02- NestJS Fundamentals I](./readmes/02-NestJS_I/02-nestjs_fundamentals_I.md)
   - [Operador de Fusion Nula](./readmes/02-NestJS_I/fusion_nula.md)
   - [Decoradores](./readmes/02-NestJS_I/decoradores.md)
