@@ -1,0 +1,94 @@
+# Nest JS - Nest JS Authentication II
+
+[Volver a Inicio](../../README.md)
+
+## 👤 Autenticación
+
+<img src="./assets/09-01.png" style="margin: 20px 0 60px 0">
+
+## 🔐 Autorización
+
+<img src="./assets/09-02.png" style="margin: 20px 0 60px 0">
+
+---
+
+## 🔄 DATAFLOW: AUTENTICACIÓN Y AUTORIZACIÓN (JWT)
+
+```txt
+╔═══════════════════════════════════════════════════════════════════╗
+║          DATAFLOW: AUTENTICACIÓN Y AUTORIZACIÓN (JWT)             ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+
+════════ VALIDAR IDENTIDAD DEL USUARIO Y ROL (Autenticación) ════════
+
+┌───────────────────────────────────────────────────────────────────┐
+│ 1) LOGIN REQUEST                                                  │
+├───────────────────────────────────────────────────────────────────┤
+│ El cliente envía por BODY:                                        │
+│    { username, password }                                         │
+└───────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌───────────────────────────────────────────────────────────────────┐
+│ 2) AUTHSERVICE                                                    │
+├───────────────────────────────────────────────────────────────────┤
+│ * Verifica username y password                                    │
+│ * Si son válidos → firma JWT                                      │
+│ * Payload incluye:                                                │
+│      { id, name, email, roles: "admin" | "user" }                 │
+└───────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌───────────────────────────────────────────────────────────────────┐
+│ 3) RESPUESTA AL CLIENTE                                           │
+├───────────────────────────────────────────────────────────────────┤
+│ Se envía:                                                         │
+│      { accessToken }                                              │
+└───────────────────────────────────────────────────────────────────┘
+
+
+══════════════ ACCESO A RUTAS PROTEGIDAS (Autorización) ═════════════
+
+┌───────────────────────────────────────────────────────────────────┐
+│ 4) REQUEST A RUTA PROTEGIDA                                       │
+├───────────────────────────────────────────────────────────────────┤
+│ El cliente envía por HEADERS:                                     │
+│    Authorization: Bearer <token>                                  │
+│      En Payload: { id, name, email, roles: "admin" | "user" }     │
+└───────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌───────────────────────────────────────────────────────────────────┐
+│ 5) AUTHGUARD                                                      │
+├───────────────────────────────────────────────────────────────────┤
+│ * Verifica validez del JWT                                        │
+│ * Si es válido → adjunta payload en:                              │
+│      request.user                                                 │
+│          { id, name, email, roles: "admin" | "user" }             │
+└───────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+┌───────────────────────────────────────────────────────────────────┐
+│ 6) ROLES GUARD                                                    │
+├───────────────────────────────────────────────────────────────────┤
+│ * Lee Metadata de la ruta (@Roles("admin"))                       │
+│ * Compara:                                                        │
+│      Metadata.roles        : "admin"                              │
+│            VS                                                     │
+│      request.user.roles    : "admin" | "user"                     │
+│ * Si coinciden → acceso permitido                                 │
+│ x Si no coinciden → ForbiddenException (403)                      │
+└───────────────────────────────────────────────────────────────────┘
+                              │
+                              ▼
+                     ┌───────────────────┐
+                     │  CONTROLLER       │
+                     │  (Ruta ejecutada) │
+                     └───────────────────┘
+
+```
+
+---
+
+[Volver a Inicio](../../README.md)
